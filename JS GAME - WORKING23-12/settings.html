@@ -1,0 +1,66 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+ 
+  <title>Guess the number</title>  
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>  
+<body>  
+  <div class="container">  
+    <h3>&#8224; SETTINGS &#8224;</h3>
+    <br>
+   <div class="wrapper">
+    <form action="" id="form">
+    <div class="first">
+        <input type="number"  id="min" placeholder="Min" autocomplete="off">
+        </div>
+      <div class="second">
+        <input type="number" id="max" placeholder="Max" autocomplete="off">
+    </div> </form>
+</div>
+    <div class="wrapper">
+    <button  onclick="myRange()" id="range" value="sum" class="solid"><h2>RANGE</h2></button>
+  
+   
+    <div class="wrapper">
+        <div class="first">
+            <input type="number" id="tries" placeholder="Number" autocomplete="off"></div>
+        <div class="second">
+                <input type="number" id="win" placeholder="Number" autocomplete="off">
+                </div>
+<br>                
+    <div class="wrapper">
+        <div class="first">
+            <button  onclick="maxGuess()" value="Check" >MAX GUESSES</button>
+            </div>
+            
+        <div class="second">
+            <button onclick="maxWin()"  value="Check">MAX GAMES</button>
+            </div>
+           
+         </div>
+         <div class="wrapper"><h6>RogerThat 2021</h6>
+        </div>
+        
+      <a href="again.html">
+        <button class="solid"><h2>MENU</h2></button></a>
+       </div>
+     </div>
+     </div>
+
+    
+<script>
+    window.onload = function() {
+        document.getElementById('min').innerText = localStorage.getItem('minValue');
+        document.getElementById('max').innerText = localStorage.getItem('maxValue');
+        document.getElementById('tries').innerText = localStorage.getItem('guessAmount');
+        document.getElementById('win').innerText = localStorage.getItem('winAmount');
+        };
+    
+</script>
+ 
+  <script src="game.js"></script>  
+</body>  
+</html>  

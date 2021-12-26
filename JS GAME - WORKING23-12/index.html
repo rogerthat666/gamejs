@@ -1,0 +1,29 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+ 
+  <title>Guess the number</title> 
+   <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>  
+
+<body>  
+  <div class="container">  
+    <h2> &#8224; Welcome to Guess the Number &#8224;</h2>  
+    <br>
+    <button onclick="welcome()">Play</button>
+
+    
+  </div>  
+  <script>localStorage.clear();</script>
+  <script>
+    function callme(){
+        var name = document.getElementById('username').value;
+        sessionStorage.setItem('userName', name); }  
+</script>
+  <script src="game.js"></script>  
+
+</body>  
+
+</html>  

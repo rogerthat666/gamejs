@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <title>Guess the number</title> 
+  <link rel="icon" href="favicon.png"> 
+  <link rel="stylesheet" href="styles.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>  
+<body>  
+  <div class="container"> 
+    <h3>&#8224; MENU &#8224;</h3><br>
+
+   <div class="wrapper">
+    <div class="first">
+    <a href="game.html">
+      <button id="counter">PLAY THE GAME</button>  </a></div>
+      <div class="second">
+      <a href="index.html">
+      <button onclick="welcome()">NEW PLAYER</button></a>
+    </div>
+    </div> 
+    <div class="wrapper">
+      <div class="first">
+        <a href="settings.html">
+        <button>GAME SETTINGS</button>  </a></div>
+        <div class="second">
+         <button onclick="gone()">LEAVE GAME</button> 
+              </div>
+    </div> 
+
+      <button class="solid"> <a href="game.html">
+      <h2>SCORE</h2>
+           
+      <h2 id="welcome"></h2>
+      <h2 id="score"></h2>
+      </a></button>
+    </div>
+  <script>
+
+      window.onload = function() {
+        document.getElementById('score').innerText = localStorage.clickcount;  
+        document.getElementById('welcome').innerText = localStorage.getItem('username');
+      };
+ 
+function gone(){
+  alert("Bye " + localStorage.getItem('username') + ", thanks for playing");
+  window.location.href = "https://rogerthat.eu/";
+  }
+  
+    </script>
+  <script src="game.js"></script>  
+</body>  
+</html>  

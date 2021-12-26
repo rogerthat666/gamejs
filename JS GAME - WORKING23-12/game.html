@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+ 
+  <title>Guess the number</title>  
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>  
+<body>  
+  <div class="container"> 
+    <h2 class="title">&#8224; GUESS THE NUMBER &#8224;</h2>
+    <br>
+    
+    <div class="solid2" >
+      
+      <h2 id="welcome" ></h2>
+      <hr>
+    <p id="range"></p>
+  
+   <br>
+    <h5 id="message2"></h5>
+    <h5 id="games"></h5>  
+    &nbsp;
+    <h2 id="message1"></h2> 
+    </div>
+ 
+<script>
+
+</script>
+    
+      <input type="number" autocomplete="off" placeholder="Enter number" id="guess" >
+
+      <button onclick="play()" id="myBtn" class="solid">GUESS</button>  
+      
+       <a href="again.html"><br>
+        
+        <button class="solid">MENU</button></a>
+  </div>  
+
+<script>
+    window.onload = function load() {
+        document.getElementById('welcome').innerText = localStorage.getItem('username') ;     
+        document.getElementById('range').innerText = "Choose a number between " + localStorage.getItem('minValue') + " and " + localStorage.getItem('maxValue');
+        document.getElementById('games').innerText = "Games = " + localStorage.clickcount + " of " + localStorage.getItem('winAmount');
+        document.getElementById('message2').innerText = "Attempts = " + no_of_guesses + " of " + localStorage.getItem('guessAmount');
+        msg1.textContent = "Let's go!"
+             }; 
+ 
+        </script>
+  <script src="game.js"></script>  
+</body>  
+</html>  
